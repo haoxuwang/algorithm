@@ -7,8 +7,9 @@ public class Code05_BSNearLeft {
 		int L = 0;
 		int R = arr.length - 1;
 		int index = -1;
+		int mid = 0;
 		while (L < R) {
-			int mid = L + ((R - L) >> 1);
+			mid = L + ((R - L) >> 1);
 			if (arr[mid] >= value) {
 				index = mid;
 				R = mid - 1;
@@ -16,7 +17,12 @@ public class Code05_BSNearLeft {
 				L = mid + 1;
 			}
 		}
-		return index;
+		return arr[L] >= value ? L : index;
+	}
+
+	public static void main(String[] args) {
+		int a[] = {1,4,5,5,5,5,5,5,6,7,8};
+		System.out.println(nearestIndex(a, 3));
 	}
 
 }
