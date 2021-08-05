@@ -15,6 +15,7 @@ public class Code07_EvenTimesOddTimes {
 		for (int curNum : arr) {
 			eO ^= curNum;
 		}
+		// 最右侧的1  1000 1010 ->  0000 0010
 		int rightOne = eO & (~eO + 1);
 		for (int cur : arr) {
 			if ((cur & rightOne) != 0) {

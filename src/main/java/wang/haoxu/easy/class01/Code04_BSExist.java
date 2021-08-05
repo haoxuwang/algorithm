@@ -22,4 +22,9 @@ public class Code04_BSExist {
 		return sortedArr[L] == num;
 	}
 
+	public static void main(String[] args) {
+		int a[] = {1,4,5,6,7,8};
+		System.out.println(exist(a, 9));
+	}
+
 }
