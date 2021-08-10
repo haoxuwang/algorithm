@@ -2,6 +2,9 @@ package wang.haoxu.easy.class04;
 
 import java.util.HashMap;
 
+/**
+ * 带随机节点的拷贝
+ */
 public class Code06_CopyListWithRandom {
 
 	public static class Node {
