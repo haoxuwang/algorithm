@@ -1,5 +1,8 @@
 package wang.haoxu.easy.class04;
 
+/**
+ * 按划分值划分
+ */
 public class Code05_SmallerEqualBigger {
 
 	public static class Node {

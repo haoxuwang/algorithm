@@ -8,8 +8,11 @@ public class Code03_HeapSort {
 		if (arr == null || arr.length < 2) {
 			return;
 		}
-		for (int i = 0; i < arr.length; i++) {
+		/*for (int i = 0; i < arr.length; i++) {
 			heapInsert(arr, i);
+		}*/
+		for (int i = arr.length - 1; i >= 0; i--) {
+			heapify(arr, i, arr.length);
 		}
 		int size = arr.length;
 		swap(arr, 0, --size);
@@ -19,6 +22,11 @@ public class Code03_HeapSort {
 		}
 	}
 
+	/**
+	 * 插入操作，插入元素在中的index位置的元素（不够通用）
+	 * @param arr
+	 * @param index
+	 */
 	public static void heapInsert(int[] arr, int index) {
 		while (arr[index] > arr[(index - 1) / 2]) {
 			swap(arr, index, (index - 1) /2);
@@ -26,14 +34,25 @@ public class Code03_HeapSort {
 		}
 	}
 
+	/**
+	 * 若给定的数据中，index节点无法保证为堆结构，此时需要对其进行heapfiy操作，保持堆结构
+	 * @param arr
+	 * @param index
+	 * @param size
+	 */
 	public static void heapify(int[] arr, int index, int size) {
 		int left = index * 2 + 1;
+		// 判断index是否有左孩子
 		while (left < size) {
+			// 左右孩子大的索引
 			int largest = left + 1 < size && arr[left + 1] > arr[left] ? left + 1 : left;
+			// 最大的再与index比较 取大的
 			largest = arr[largest] > arr[index] ? largest : index;
+			// index比孩子大
 			if (largest == index) {
 				break;
 			}
+			// 交换
 			swap(arr, largest, index);
 			index = largest;
 			left = index * 2 + 1;

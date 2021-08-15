@@ -2,6 +2,7 @@ package wang.haoxu.easy.class05;
 
 import java.util.HashMap;
 import java.util.LinkedList;
+import java.util.Queue;
 
 public class Code03_TreeMaxWidth {
 
@@ -14,7 +15,21 @@ public class Code03_TreeMaxWidth {
 			this.value = data;
 		}
 	}
-
+	// 二叉树的宽度优先遍历
+	public static void w(Node head) {
+		Queue<Node> queue = new LinkedList();
+		queue.add(head);
+		while (!queue.isEmpty()) {
+			Node cur = queue.poll();
+			System.out.print(cur.value + "----");
+			if (cur.left != null) {
+				queue.add(cur.left);
+			}
+			if (cur.right != null) {
+				queue.add(cur.right);
+			}
+		}
+	}
 	public static int getMaxWidth(Node head) {
 		if (head == null) {
 			return 0;
@@ -51,7 +66,35 @@ public class Code03_TreeMaxWidth {
 		}
 		return maxWidth;
 	}
-
+	public static int getMaxWidth2(Node head) {
+		Queue<Node> queue = new LinkedList<>();
+		queue.add(head);
+		Node curend = head;
+		Node nextend = null;
+		int nodes = 0;
+		int max = -1;
+		while (!queue.isEmpty()) {
+			Node cur = queue.poll();
+			if (cur.left != null) {
+				queue.add(cur.left);
+				nextend = cur.left;
+			}
+			if (cur.right != null) {
+				queue.add(cur.right);
+				nextend = cur.right;
+			}
+			if (cur != curend) {
+				nodes++;
+			} else {
+				nodes++;
+				max = Math.max(max, nodes);
+				nodes = 0;
+				curend = nextend;
+				nextend = null;
+			}
+		}
+		return Math.max(max, nodes);
+	}
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 

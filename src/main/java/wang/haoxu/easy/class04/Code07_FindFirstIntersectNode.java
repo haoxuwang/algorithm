@@ -1,5 +1,8 @@
 package wang.haoxu.easy.class04;
 
+/**
+ * 查找第一个相交节点
+ */
 public class Code07_FindFirstIntersectNode {
 
 	public static class Node {
