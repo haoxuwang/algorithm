@@ -2,6 +2,13 @@ package wang.haoxu.easy.class02;
 
 public class Code02_SmallSum {
 
+	/**
+	 * 小和：每个元素左边比自己小的数的和 再求和
+	 * 左边比自己小的数 -》 右边比自己大的数量 * 自己
+	 * 逆序对也能这样求
+	 * @param arr
+	 * @return
+	 */
 	public static int smallSum(int[] arr) {
 		if (arr == null || arr.length < 2) {
 			return 0;
