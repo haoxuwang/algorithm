@@ -3,6 +3,9 @@ package wang.haoxu.easy.class07;
 import java.util.Arrays;
 import java.util.Comparator;
 
+/**
+ * 最小字典序
+ */
 public class Code02_LowestLexicography {
 
 	public static class MyComparator implements Comparator<String> {
