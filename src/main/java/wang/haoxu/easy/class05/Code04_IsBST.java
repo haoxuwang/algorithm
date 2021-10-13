@@ -2,6 +2,9 @@ package wang.haoxu.easy.class05;
 
 import java.util.LinkedList;
 
+/**
+ * 搜索二叉树
+ */
 public class Code04_IsBST {
 
 	public static class Node {

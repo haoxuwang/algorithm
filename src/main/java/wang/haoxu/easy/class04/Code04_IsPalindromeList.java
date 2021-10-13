@@ -2,6 +2,9 @@ package wang.haoxu.easy.class04;
 
 import java.util.Stack;
 
+/**
+ * 回文
+ */
 public class Code04_IsPalindromeList {
 
 	public static class Node {

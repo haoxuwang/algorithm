@@ -2,6 +2,10 @@ package wang.haoxu.easy.class05;
 
 import java.util.LinkedList;
 
+/**
+ * 完全二叉树
+ * 不可用套路
+ */
 public class Code05_IsCBT {
 
 	public static class Node {

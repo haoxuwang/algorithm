@@ -3,6 +3,9 @@ package wang.haoxu.easy.class05;
 import java.util.HashMap;
 import java.util.HashSet;
 
+/**
+ * 最低公共主先
+ */
 public class Code07_LowestCommonAncestor {
 
 	public static class Node {

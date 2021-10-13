@@ -1,5 +1,9 @@
 package wang.haoxu.improve.class07;
 
+import java.awt.*;
+import java.util.ArrayList;
+import java.util.List;
+
 public class Code02_CoinsMin {
 
 	public static int minCoins1(int[] arr, int aim) {

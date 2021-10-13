@@ -1,5 +1,8 @@
 package wang.haoxu.easy.class05;
 
+/**
+ * 平衡二叉树
+ */
 public class Code06_IsBalancedTree {
 
 	public static class Node {
