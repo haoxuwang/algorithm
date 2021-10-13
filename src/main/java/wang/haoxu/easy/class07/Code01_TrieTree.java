@@ -1,5 +1,8 @@
 package wang.haoxu.easy.class07;
 
+/**
+ * 前缀树
+ */
 public class Code01_TrieTree {
 
 	public static class TrieNode {
