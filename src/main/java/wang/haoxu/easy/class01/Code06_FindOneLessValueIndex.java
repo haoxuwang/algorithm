@@ -1,6 +1,6 @@
 package wang.haoxu.easy.class01;
 
-public class Code09_FindOneLessValueIndex {
+public class Code06_FindOneLessValueIndex {
 
 	/**
 	 * 局部最小值
